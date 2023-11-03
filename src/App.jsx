@@ -1,22 +1,21 @@
 import React from "react";
+import Homepage from "./components/Homepage";
+import { useState } from "react";
+import StartGame from "./components/StartGame";
 
 const App = () => {
+
+  const [isGameStarted, setIsGameStarted] = useState(false)
+
+  const toggleGameStarted = () => {
+    setIsGameStarted(prev => !prev)
+  }
+  
+  
+
   return (
     <div className="font-poppins">
-      <div className="container flex max-w-[1182px] gap-1 max-h-[522px] items-center mx-auto mt-10">
-        <div className="flex max-w-[650px] max-h-[522px]">
-          <img src="/images/dices.png" alt="dice image" />
-        </div>
-
-        <div className="flex flex-col">
-          <h1 className="font-bold text-8xl">DICE GAME</h1>
-          <div className="flex justify-end">
-            <button className="bg-black text-white px-4 py-2 w-[220px] rounded-[5px] mt-4">
-              Play Now
-            </button>
-          </div>
-        </div>
-      </div>
+      {isGameStarted ? <Homepage toggle={toggleGameStarted} /> : <StartGame />}
     </div>
   );
 };
