@@ -5,7 +5,7 @@ import StartGame from "./components/StartGame";
 
 const App = () => {
 
-  const [isGameStarted, setIsGameStarted] = useState(false)
+  const [isGameStarted, setIsGameStarted] = useState(true)
 
   const toggleGameStarted = () => {
     setIsGameStarted(prev => !prev)
