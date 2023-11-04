@@ -14,7 +14,7 @@ const PickNumber = ({ error, setError, selectedNumber, setSelectedNumber }) => {
       <div className="flex gap-6 mt-4">
         {numbers.map((value, index) => (
           <div
-            className={`w-[72px] h-[72px] border border-black flex items-center justify-center ${
+            className={`w-[72px] h-[72px] border border-black flex cursor-pointer hover:font-bold hover:text-4xl hover:text-pink-800 items-center justify-center ${
               value === selectedNumber
                 ? "bg-black text-white"
                 : "bg-white text-black"

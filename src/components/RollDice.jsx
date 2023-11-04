@@ -1,4 +1,4 @@
-const RollDice = ({ setScore, toggle, rollDice, currentDice }) => {
+const RollDice = ({ handleError, setScore, toggle, rollDice, currentDice }) => {
   const resetScore = () => {
     setScore(0);
   };
@@ -19,7 +19,10 @@ const RollDice = ({ setScore, toggle, rollDice, currentDice }) => {
 
       <div className="flex flex-col gap-6 m-auto">
         <button
-          onClick={resetScore}
+          onClick={() => {
+            resetScore();
+            handleError();
+          }}
           className="w-[220px] px-4 py-2 font-semibold border border-black rounded
           transition ease-out duration-[1000ms]
             hover:bg-black hover:text-white hover:border hover:border-black hover:ease-in hover:duration-300
