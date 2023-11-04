@@ -4,14 +4,11 @@ import { useState } from "react";
 import StartGame from "./components/StartGame";
 
 const App = () => {
-
-  const [isGameStarted, setIsGameStarted] = useState(true)
+  const [isGameStarted, setIsGameStarted] = useState(true);
 
   const toggleGameStarted = () => {
-    setIsGameStarted(prev => !prev)
-  }
-  
-  
+    setIsGameStarted((prev) => !prev);
+  };
 
   return (
     <div className="font-poppins">
